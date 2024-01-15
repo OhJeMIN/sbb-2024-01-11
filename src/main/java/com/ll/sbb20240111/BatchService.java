@@ -14,13 +14,13 @@ import org.springframework.transaction.annotation.Transactional;
 public class BatchService {
 
     private final JobLauncher jobLauncher;
-    private final Job helloJob;
+    private final Job hello3Job;
 
     public void runHelloJob() {
         try {
             JobParameters jobParameters = new JobParametersBuilder()
                     .toJobParameters();
-            jobLauncher.run(helloJob, jobParameters);
+            jobLauncher.run(hello3Job, jobParameters);
         } catch (Exception e) {
             e.printStackTrace();
         }
