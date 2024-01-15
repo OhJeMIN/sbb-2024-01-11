@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class BatchController {
     private final BatchService batchService;
 
-    @GetMapping("/simple")
+    @GetMapping("/hello")
     @ResponseBody
     public String runSimpleJob(){
-        batchService.runSimpleJob();
+        batchService.runHelloJob();
 
-        return "runSimpleJob OK";
+        return "HelloJob OK";
     }
 }
